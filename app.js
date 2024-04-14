@@ -22,18 +22,18 @@ const db = {
     ]
 };
 
-// --- Model ---
+// --- Model --- Business Logic
 
 // What is a Model ?
-//     In the context of web application development and especially in the MVC(Model - View - Controller) design pattern, the "Model" refers to the part of the application that manages data and business rules.It is responsible for accessing the data storage layer, retrieving data, manipulating it, and storing it.The model does not have knowledge of data presentation and focuses exclusively on business logic, which includes:
+//     In the context of web application development and especially in the MVC(Model - View - Controller) design pattern, the "Model" refers to the part of the application that manages data and business rules. It is responsible for accessing the data storage layer, retrieving data, manipulating it, and storing it. The model does not have knowledge of data presentation and focuses exclusively on business logic, which includes:
 
-// Database Interaction: The model interacts with the database through queries, updates, and deletions.It may use an ORM(Object - Relational Mapping) to map database data to objects in code.
+// Database Interaction: The model interacts with the database through queries, updates, and deletions. It may use an ORM(Object - Relational Mapping) to map database data to objects in code.
 
 // Business Rules: Implements the business rules of the system; for example, calculating taxes, deciding user permissions, or any other logical decision required in the context of the application.
 
 // Data Structuring: Defines the structure of the data handled in the application, such as entities and their relationships(e.g., users, products, transactions).
 
-// In the code you provided, the model is represented by UserModel and StatusModel.Each of these models has methods that interact with a simulated data structure(a JavaScript object in this case), which acts as an "in-memory database":
+// In the code you provided, the model is represented by UserModel and StatusModel. Each of these models has methods that interact with a simulated data structure(a JavaScript object in this case), which acts as an "in-memory database":
 
 // UserModel: Has the getUsers method, which returns all users from the simulated database.
 //     StatusModel: Has the getStatus method, which returns the current system status from the simulated database.
@@ -52,21 +52,21 @@ const StatusModel = {
     }
 };
 
-// --- Controller ---
+// --- Controller --- Between Model and View
 
 
 // What is a Controller ?
-//     In the MVC(Model - View - Controller) design pattern, the Controller acts as an intermediary between the view, which is the user interface, and the model, which involves business logic and data handling.Its primary function is to receive user inputs, process them(with the help of models if necessary), and return the appropriate response.
+//     In the MVC(Model - View - Controller) design pattern, the Controller acts as an intermediary between the view, which is the user interface, and the model, which involves business logic and data handling. Its primary function is to receive user inputs, process them(with the help of models if necessary), and return the appropriate response.
 
 // Here are the key functions of a controller:
 
-// Receive Requests: The controller receives user actions, usually via HTTP requests such as GET or POST.In web applications, each application route is typically associated with a specific method in a controller.
+// Receive Requests: The controller receives user actions, usually via HTTP requests such as GET or POST. In web applications, each application route is typically associated with a specific method in a controller.
 
-// Process Data: Once the controller receives a request, it may need to retrieve or modify data through models.For example, if a user requests a page that lists various products, the controller will ask the product model to retrieve product information from the database.
+// Process Data: Once the controller receives a request, it may need to retrieve or modify data through models. For example, if a user requests a page that lists various products, the controller will ask the product model to retrieve product information from the database.
 
-// Control Flow Logic: The controller decides what action to take in response to user input and which view to display.If the data entered by the user is not valid, the controller may decide to redisplay the entry form with error messages.
+// Control Flow Logic: The controller decides what action to take in response to user input and which view to display. If the data entered by the user is not valid, the controller may decide to redisplay the entry form with error messages.
 
-// Return Responses: Finally, the controller passes data to a view if necessary, which is then presented to the user.It can also redirect the user to another controller action in response to different events, like the successful submission of a form.
+// Return Responses: Finally, the controller passes data to a view if necessary, which is then presented to the user. It can also redirect the user to another controller action in response to different events, like the successful submission of a form.
 
 // In the code you provided earlier, you have concrete examples of controllers:
 
@@ -102,7 +102,7 @@ const StatusController = {
     }
 };
 
-// --- View ---
+// --- View --- Presentation Logic to the User
 
 // In the context of the MVC(Model - View - Controller) design pattern, the View component is responsible for presenting data to the user in a specific format.It defines how data is displayed on the screen or through other interfaces, and it is strictly concerned with the user interface aspect of an application.The view interacts with the user and generates output to display data, but it does not process data or handle business logic—that's the role of the model and the controller, respectively.
 
