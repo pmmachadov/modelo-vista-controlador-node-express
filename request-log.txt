@@ -1,0 +1,4 @@
+Received request on / with method GET
+Received request on / with method GET
+Received request on /users with method GET
+Received request on /status with method GET
